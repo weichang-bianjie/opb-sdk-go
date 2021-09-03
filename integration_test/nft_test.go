@@ -7,6 +7,11 @@ import (
 	"strings"
 )
 
+func (s *IntegrationTestSuite) TestQueryToken() {
+	token, err := s.IRITAClient.Token.QueryToken("uirita")
+	require.NoError(s.T(), err)
+	fmt.Println(token)
+}
 func (s *IntegrationTestSuite) TestNFT() {
 	denomID := "psimpc"
 	nftId := strings.ToLower(s.RandStringOfLength(6))
@@ -17,9 +22,6 @@ func (s *IntegrationTestSuite) TestNFT() {
 	//	Name:   denomName,
 	//	Schema: schema,
 	//}
-	//acc,err := s.IRITAClient.Bank.QueryAccount("iaa1fgg95pg4tmlsn0vkwwjlt5lxrwcmnp2c9z7jyg")
-	//require.NoError(s.T(), err)
-	//fmt.Println(acc.Address)
 
 	//res,err := s.IRITAClient.Status(context.Background())
 	//res, err := s.NFT.IssueDenom(issueReq, s.baseTx)
