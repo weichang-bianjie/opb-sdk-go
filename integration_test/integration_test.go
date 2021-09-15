@@ -25,7 +25,7 @@ const (
 	grpcAddr = "opbt.bsngate.com:18603"
 	chainID  = "wenchangchain"
 	charset  = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
-	mnemonic = "pull eagle capital skin tackle gather session stock drill left already bulk divide midnight general exhaust apple bind turkey evoke must isolate inner rose"
+	mnemonic = "youth rely online fancy emerge vast question crop copy must salt rebel rib wave impulse exist control wreck process lawsuit canyon oxygen tattoo festival"
 )
 
 type IntegrationTestSuite struct {
@@ -63,13 +63,13 @@ func (s *IntegrationTestSuite) SetupSuite() {
 	require.NoError(s.T(), err)
 	fmt.Println(res)
 
-	fee, err := types.ParseDecCoins("300000uirita")
+	fee, err := types.ParseDecCoins("200000uirita")
 	require.NoError(s.T(), err)
 
 	s.baseTx = types.BaseTx{
 		From:     user,
 		Gas:      200000,
-		Memo:     "test",
+		Memo:     "",
 		Mode:     types.Commit,
 		Password: password,
 		Fee:      fee,
